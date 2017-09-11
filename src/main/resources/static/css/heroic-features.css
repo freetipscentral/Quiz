@@ -1,0 +1,117 @@
+/*!
+ * Start Bootstrap - Heroic Features (http://startbootstrap.com/template-overviews/heroic-features)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-heroic-features/blob/master/LICENSE)
+ */
+
+body {
+    padding-top: 54px;
+}
+
+@media (min-width: 992px) {
+    body {
+        padding-top: 56px;
+    }
+}
+
+.card {
+    height: 100%;
+}
+
+header {
+  width: 100%;
+  height: 100%;
+  background: url(https://unsplash.com/photos/cEeEtjedNls) center center no-repeat;
+  background-size: cover;
+}
+
+.navbar-brand {
+	color:red !important;
+}
+
+background-color: #f1f1f1;
+
+.confirm-label { position: relative; padding: 28px 165px 28px 81px; }
+
+.confirm-title { font-size: 14px; line-height: 18px; font-weight: 400; letter-spacing: 1.4px; text-transform: uppercase; margin-bottom: 10px; }
+
+.confirm-text { font-family: 'Open Sans', sans-serif; font-size: 14px; line-height: 18px; font-weight: 400; letter-spacing: 0px; }
+
+.confirm-img { position: absolute; top: 50%; left: 29px; -webkit-transform: translateY(-50%); -moz-transform: translateY(-50%); -ms-transform: translateY(-50%); -o-transform: translateY(-50%); transform: translateY(-50%); }
+
+.confirm-print { position: absolute; top: 50%; right: 32px; -webkit-transform: translateY(-50%); -moz-transform: translateY(-50%); -ms-transform: translateY(-50%); -o-transform: translateY(-50%); transform: translateY(-50%); }
+
+.custom-panel { font-family: 'Open Sans', sans-serif; font-size: 14px; line-height: 18px; font-weight: 700; padding: 15px 20px 17px 20px; }
+
+.detail-content-block { margin-bottom: 66px; margin-top: 66px;}
+
+.detail-content-block > p:last-child { margin-bottom: 0px; }
+
+.detail-content, .acc-body { font-family: 'Open Sans', sans-serif; font-size: 14px; line-height: 22px; font-weight: 400; color: #b9b9b9; }
+
+.detail-content h1, .detail-content h2, .detail-content h3, .detail-content h4, .detail-content h5, .detail-content h6, .acc-body h1, .acc-body h2, .acc-body h3, .acc-body h4, .acc-body h5, .acc-body h6 { font-family: 'Cabin', sans-serif; color: #222222; font-weight: 700; }
+
+.detail-content h1, .acc-body h1 { margin-bottom: 20px; }
+
+.detail-content h2, .acc-body h2 { margin-bottom: 15px; }
+
+.detail-content h3, .acc-body h3 { letter-spacing: 1.8px; margin-bottom: 11px; }
+
+.detail-content h4, .acc-body h4 { margin-bottom: 18px; }
+
+.detail-content h5, .acc-body h5 { font-size: 14px; letter-spacing: 1.2px; text-transform: uppercase; margin-bottom: 21px; }
+
+.detail-content h6, .acc-body h6 { font-size: 11px; text-transform: uppercase; margin-bottom: 13px; }
+
+.detail-content p, .acc-body p { font-size: 14px; line-height: 22px; font-weight: 400; margin-bottom: 25px; }
+
+.detail-content ul, .acc-body ul { margin-bottom: 25px; }
+
+.detail-content li, .acc-body li { position: relative; font-family: 'Open Sans', sans-serif; font-size: 14px; line-height: 22px; font-weight: 400; padding-left: 14px; margin-bottom: 10px; }
+
+.detail-content li:before, .acc-body li:before { content: '•'; display: inline-block; position: relative; left: -10px; color: #2d3e50; }
+
+.detail-content img, .acc-body img { max-width: 100%; margin-bottom: 25px; border-radius: 5px;}
+
+.detail-content .swiper-slide img, .acc-body .swiper-slide img { margin-bottom: 0px; }
+
+.detail-content .embed-responsive, .acc-body .embed-responsive { margin-bottom: 25px; }
+
+.detail-content .gal-item img, .acc-body .gal-item img { margin-bottom: 0px; }
+
+.detail-content .gal-item h4.color-white, .acc-body .gal-item h4.color-white { color: #fff; }
+
+.detail-content .isotope-container, .acc-body .isotope-container { margin-bottom: 20px; }
+
+.detail-content .slider-wth-thumbs, .detail-content .arrows, .acc-body .slider-wth-thumbs, .acc-body .arrows { margin-bottom: 25px; }
+
+.detail-content.color-1 p { color: #2d3e50; }
+
+.bg-dr-blue-2 {
+	background: #ff6600; 
+	margin-bottom:5px; 
+	padding:10px;
+	 -moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+}
+
+.bg-dr-blue-2:hover { 
+    background: #ff895a;
+}
+
+.radius-5 { -moz-border-radius: 5px; border-radius: 5px; overflow: hidden; }
+.color-white {color: #fff; }
+
+input[type="radio"]{
+    margin-right:10px;
+}
+
+input[type="checkbox"]{
+    margin-right:10px;
+}
+
+.pull-right {
+    float: right !important; // Use of important emulates bootstrap
+}

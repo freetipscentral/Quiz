@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Hotel Booking App</title>
+<link rel="stylesheet" href="../static/bootstrap/css/bootstrap.css"
+	th:href="@{/bootstrap/css/bootstrap.css}" />
+<link rel="stylesheet" href="../static/bootstrap/css/bootstrap.css"
+	th:href="@{/bootstrap/css/bootstrap-grid.css}" />
+<link rel="stylesheet" href="../static/bootstrap/css/bootstrap.css"
+	th:href="@{/bootstrap/css/bootstrap-reboot.css}" />
+<link rel="stylesheet" href="../static/css/heroic-features.css"
+	th:href="@{/css/heroic-features.css}" />
+<script type="text/javascript" src="/static/jquery/jquery.js"
+	th:src="@{/jquery/jquery.js}"></script>
+<script type="text/javascript" src="/static/popper/popper.js"
+	th:src="@{/popper/popper.js}"></script>
+<script type="text/javascript" src="/static/js/bootstrap.js"
+	th:src="@{/js/bootstrap.js}"></script>
+<script type="text/javascript" src="/static/js/quiz.js"
+	th:src="@{/js/quiz.js}"></script>	
+</head>
+<body>
+
+	<!-- Navigation -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+		<div class="container">
+			<a class="navbar-brand" href="#">AWS Practice Tests</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse"
+				data-target="#navbarResponsive" aria-controls="navbarResponsive"
+				aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item active"><a class="nav-link" href="#">Home
+							<span class="sr-only">(current)</span>
+					</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">About</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">Services</a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="#">Contact</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!-- Page Content -->
+	<div class="container">		
+		<div class="detail-content-block">
+			<h3 class="small-title" th:text="${question.questionDescription}">What Does S3 Stand For</h3>
+			<form th:action="@{'/s3Exam/'}" method="get" id="quizForm">
+				<div class="confirm-label bg-dr-blue-2 radius-5" th:each="answer,iterationStatus  : ${question.answers}">
+					<div class="confirm-title color-white">
+						<label th:if="${question.answerType} == 'radio'" class="radio-inline">
+							<input type="radio" name="optradio" th:value="${answer.id}" th:text="${answer.answerText}">
+								Simple Storage Service</input>
+						</label>
+						<label th:if="${question.answerType} == 'multiple'" class="radio-inline">
+							<input type="checkbox" name="optradio" th:value="${answer.id}" th:text="${answer.answerText}">
+								Simple Storage Service</input>
+						</label>
+					</div>
+				</div>
+				<button th:if="${isFirstQuestion} == 'false'" type="button" class="btn btn-primary pull-left" id="showPreviousQuestion">
+					Previous
+				</button>
+				<button th:if="${isLastQuestion} == 'false'" type="button" class="btn btn-primary pull-right" id="showNextQuestion">
+					Next
+				</button>
+				<button th:if="${isLastQuestion} == 'true'" type="button" class="btn btn-primary pull-right" id="submitButton">
+					Submit
+				</button>
+				<input type="hidden" name="id" th:value="${question.id}"/>
+				<input type="hidden" name="actionRequired" id="actionRequired"/>
+			</form>
+		</div>		
+		<!-- /.row -->
+	</div>
+	<!-- /.container -->
+
+	<!-- Footer -->
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+					<div class="footer-block">
+						<img src="img/theme-1/logo.png" alt="" class="logo-footer"></img>
+						<div class="f_text color-grey-7">SkillValue is your full-stack assessment solution that goes the extra mile with you.
+
+We cover a large amount of technologies and we’re always adding more, because just like you, we strive to be better, to learn more and in a smarter way.</div>
+						<div class="footer-share">
+							<a href="#"><span class="fa fa-facebook"></span></a> <a href="#"><span
+								class="fa fa-twitter"></span></a> <a href="#"><span
+								class="fa fa-google-plus"></span></a> <a href="#"><span
+								class="fa fa-pinterest"></span></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-6 col-sm-6 no-padding">
+					<div class="footer-block">
+						<h6>Travel News</h6>
+						<div class="f_news clearfix">
+							<a class="f_news-img black-hover" href="#"> <img
+								class="img-responsive" src="img/home_6/news_1.jpg" alt=""></img>
+								<div class="tour-layer delay-1"></div>
+							</a>
+							<div class="f_news-content">
+								<a class="f_news-tilte color-white link-red" href="#">amazing
+									place</a> <span class="date-f">Mar 18, 2015</span> <a href="#"
+									class="r-more">read more</a>
+							</div>
+						</div>
+						<div class="f_news clearfix">
+							<a class="f_news-img black-hover" href="#"> <img
+								class="img-responsive" src="img/home_6/news_2.jpg" alt=""></img>
+								<div class="tour-layer delay-1"></div>
+							</a>
+							<div class="f_news-content">
+								<a class="f_news-tilte color-white link-red" href="#">amazing
+									place</a> <span class="date-f">Mar 18, 2015</span> <a href="#"
+									class="r-more">read more</a>
+							</div>
+						</div>
+						<div class="f_news clearfix">
+							<a class="f_news-img black-hover" href="#"> <img
+								class="img-responsive" src="img/home_6/news_1.jpg" alt=""></img>
+								<div class="tour-layer delay-1"></div>
+							</a>
+							<div class="f_news-content">
+								<a class="f_news-tilte color-white link-red" href="#">amazing
+									place</a> <span class="date-f">Mar 18, 2015</span> <a href="#"
+									class="r-more">read more</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+					<div class="footer-block">
+						<h6>Our Offerings:</h6>
+						<a href="#" class="tags-b">training</a> <a href="#" class="tags-b">training</a>
+						<a href="#" class="tags-b">assessments</a> <a href="#" class="tags-b">assessments</a>
+						<a href="#" class="tags-b">quizzes</a> <a href="#" class="tags-b">quizzes</a>
+						<a href="#" class="tags-b">recruitment</a> <a href="#" class="tags-b">recruitment</a>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+					<div class="footer-block">
+						<h6>Contact Info</h6>
+						<div class="contact-info">
+							<div class="contact-line color-grey-3">
+								<i class="fa fa-map-marker"></i><span>Des Moines, IA</span>
+							</div>
+							<div class="contact-line color-grey-3">
+								<i class="fa fa-phone"></i><a href="tel:93123456789">+1 309
+									966 5752</a>
+							</div>
+							<div class="contact-line color-grey-3">
+								<i class="fa fa-envelope-o"></i><a href="mailto:">info@amazingskills.com</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-link bg-black">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="copyright">
+							<span>&copy; 2017 All rights reserved. Amazing Skills</span>
+						</div>
+						<ul>
+							<li><a class="link-aqua" href="#">Privacy Policy </a></li>
+							<li><a class="link-aqua" href="#">About Us</a></li>
+							<li><a class="link-aqua" href="#">Support </a></li>
+							<li><a class="link-aqua" href="#">FAQ</a></li>
+							<li><a class="link-aqua" href="#">Blog</a></li>
+							<li><a class="link-aqua" href="#">Forum</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>	
+	<!-- Bootstrap core JavaScript -->
+	<script src="vendor/jquery/jquery.min.js"></script>
+	<script src="vendor/popper/popper.min.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+</html>
